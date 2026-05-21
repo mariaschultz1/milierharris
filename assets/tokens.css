@@ -1,0 +1,251 @@
+/* Milier Harris — design tokens.
+   Narrow palette, two type voices: a clean sans for body and a high-
+   contrast serif for display work. */
+
+/* Fonts — body uses Poppins, display uses Instrument Serif. */
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  /* ---------- Colour ---------- */
+  /* Core palette. Never pure black or pure white. */
+  --mh-ink:        #1A1A18;   /* Primary — type, mark, structure        */
+  --mh-paper:      #F4F1EA;   /* Primary background — warm paper        */
+  --mh-leman:      #2E6E6A;   /* Accent — Lac Léman, one per view       */
+  --mh-deep:       #173B3A;   /* Calmed accent — large fills, footers   */
+  --mh-stone:      #6B6A64;   /* Secondary text, captions, dividers     */
+
+  /* Tonal extensions, derived from the core. Use sparingly. */
+  --mh-paper-2:    #ECE8DF;   /* Slightly deeper paper — cards, rules   */
+  --mh-paper-3:    #E2DDD0;   /* Subtle separation, hover ground        */
+  --mh-ink-soft:   #2C2C29;   /* Body on paper-2 if needed              */
+  --mh-stone-soft: #9B9A94;   /* Disabled state, very quiet UI hints    */
+  --mh-leman-soft: #5F8F8C;   /* Hover on link only                     */
+
+  /* ---------- Semantic colour ---------- */
+  --mh-bg:           var(--mh-paper);
+  --mh-bg-elev:      var(--mh-paper-2);
+  --mh-bg-inverse:   var(--mh-ink);
+
+  --mh-fg:           var(--mh-ink);
+  --mh-fg-muted:     var(--mh-stone);
+  --mh-fg-quiet:     var(--mh-stone-soft);
+  --mh-fg-inverse:   var(--mh-paper);
+
+  --mh-accent:       var(--mh-leman);
+  --mh-accent-deep:  var(--mh-deep);
+  --mh-accent-hover: var(--mh-leman-soft);
+
+  --mh-rule:         var(--mh-ink);
+  --mh-rule-quiet:   var(--mh-stone-soft);
+  --mh-divider:      var(--mh-paper-3);
+
+  /* ---------- Type families ---------- */
+  --mh-font-sans:    "Poppins", "Inter", "Söhne", "Neue Haas Grotesk",
+                     "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mh-font-serif:   "Instrument Serif", "GFS Didot", "Didot", "Canela",
+                     "Tiempos Headline", Georgia, serif;
+  --mh-font-mono:    "JetBrains Mono", ui-monospace, SFMono-Regular,
+                     "SF Mono", Menlo, monospace;
+
+  /* ---------- Type scale (px) ---------- */
+  /* Display rests on the editorial serif; everything else
+     uses the sans. Sentence case throughout — caps only for
+     the tracked eyebrow. */
+  --mh-fs-display:  60px;
+  --mh-fs-h1:       48px;
+  --mh-fs-h2:       28px;
+  --mh-fs-h3:       22px;
+  --mh-fs-h4:       17px;
+  --mh-fs-body:     15px;
+  --mh-fs-small:    13px;
+  --mh-fs-eyebrow:  11px;
+  --mh-fs-caption:  11px;
+
+  /* ---------- Weights ---------- */
+  --mh-w-light:     300;
+  --mh-w-regular:   400;
+  --mh-w-medium:    500;
+  --mh-w-semibold:  600;
+
+  /* ---------- Line heights ---------- */
+  --mh-lh-display:  1.08;
+  --mh-lh-heading:  1.18;
+  --mh-lh-body:     1.55;
+  --mh-lh-tight:    1.3;
+
+  /* ---------- Tracking ---------- */
+  --mh-ls-display:  -0.012em;
+  --mh-ls-heading:  -0.005em;
+  --mh-ls-body:     0;
+  --mh-ls-eyebrow:  0.16em;   /* +6% to +16% — tracked uppercase only */
+
+  /* ---------- Spacing scale (4px base) ---------- */
+  --mh-s-1:   4px;
+  --mh-s-2:   8px;
+  --mh-s-3:   12px;
+  --mh-s-4:   16px;
+  --mh-s-5:   24px;
+  --mh-s-6:   32px;
+  --mh-s-7:   48px;
+  --mh-s-8:   64px;
+  --mh-s-9:   96px;
+  --mh-s-10: 128px;
+
+  /* ---------- Radii ---------- */
+  /* Restrained. The mark and grotesque want crisp edges. */
+  --mh-r-0:  0px;
+  --mh-r-1:  2px;
+  --mh-r-2:  4px;
+  --mh-r-pill: 999px;
+
+  /* ---------- Borders / rules ---------- */
+  --mh-rule-hair:  0.5px;
+  --mh-rule-thin:  1px;
+  --mh-rule-bold:  1.5px;
+
+  /* ---------- Elevation ---------- */
+  /* Almost never used. Restraint over depth. */
+  --mh-shadow-0: none;
+  --mh-shadow-1: 0 1px 0 rgba(26,26,24,0.04),
+                 0 1px 2px rgba(26,26,24,0.04);
+  --mh-shadow-2: 0 1px 2px rgba(26,26,24,0.05),
+                 0 8px 24px rgba(26,26,24,0.06);
+
+  /* ---------- Motion ---------- */
+  /* Quiet, no bounces. Standard ease for opacity & colour. */
+  --mh-ease:       cubic-bezier(0.2, 0.6, 0.2, 1);
+  --mh-dur-fast:   120ms;
+  --mh-dur:        200ms;
+  --mh-dur-slow:   400ms;
+
+  /* ---------- Container widths ---------- */
+  --mh-w-prose:    640px;
+  --mh-w-content:  960px;
+  --mh-w-wide:    1200px;
+}
+
+/* ============================================================
+   Element defaults — semantic styles
+   ============================================================ */
+
+html, body {
+  background: var(--mh-bg);
+  color: var(--mh-fg);
+  font-family: var(--mh-font-sans);
+  font-size: var(--mh-fs-body);
+  line-height: var(--mh-lh-body);
+  font-weight: var(--mh-w-regular);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Display — editorial serif, only for the largest moments */
+.mh-display, h1.mh-display {
+  font-family: var(--mh-font-serif);
+  font-weight: var(--mh-w-regular);
+  font-size: var(--mh-fs-display);
+  line-height: var(--mh-lh-display);
+  letter-spacing: var(--mh-ls-display);
+  color: var(--mh-fg);
+}
+
+h1, .mh-h1 {
+  font-family: var(--mh-font-serif);
+  font-weight: var(--mh-w-regular);
+  font-size: var(--mh-fs-h1);
+  line-height: var(--mh-lh-display);
+  letter-spacing: var(--mh-ls-display);
+  color: var(--mh-fg);
+}
+
+h2, .mh-h2 {
+  font-family: var(--mh-font-sans);
+  font-weight: var(--mh-w-medium);
+  font-size: var(--mh-fs-h2);
+  line-height: var(--mh-lh-heading);
+  letter-spacing: var(--mh-ls-heading);
+  color: var(--mh-fg);
+}
+
+h3, .mh-h3 {
+  font-family: var(--mh-font-sans);
+  font-weight: var(--mh-w-medium);
+  font-size: var(--mh-fs-h3);
+  line-height: var(--mh-lh-heading);
+  color: var(--mh-fg);
+}
+
+h4, .mh-h4 {
+  font-family: var(--mh-font-sans);
+  font-weight: var(--mh-w-medium);
+  font-size: var(--mh-fs-h4);
+  line-height: var(--mh-lh-tight);
+  color: var(--mh-fg);
+}
+
+p, .mh-body {
+  font-family: var(--mh-font-sans);
+  font-size: var(--mh-fs-body);
+  line-height: var(--mh-lh-body);
+  color: var(--mh-fg);
+  max-width: var(--mh-w-prose);
+  text-wrap: pretty;
+}
+
+small, .mh-small {
+  font-size: var(--mh-fs-small);
+  line-height: var(--mh-lh-tight);
+  color: var(--mh-fg-muted);
+}
+
+.mh-eyebrow {
+  font-family: var(--mh-font-sans);
+  font-size: var(--mh-fs-eyebrow);
+  font-weight: var(--mh-w-regular);
+  text-transform: uppercase;
+  letter-spacing: var(--mh-ls-eyebrow);
+  color: var(--mh-fg-muted);
+}
+
+.mh-caption {
+  font-family: var(--mh-font-sans);
+  font-size: var(--mh-fs-caption);
+  font-weight: var(--mh-w-light);
+  color: var(--mh-fg-muted);
+}
+
+a, .mh-link {
+  color: var(--mh-accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--mh-accent);
+  padding-bottom: 1px;
+  transition: color var(--mh-dur) var(--mh-ease),
+              border-color var(--mh-dur) var(--mh-ease);
+}
+a:hover, .mh-link:hover {
+  color: var(--mh-accent-hover);
+  border-color: var(--mh-accent-hover);
+}
+
+hr, .mh-rule {
+  border: 0;
+  border-top: var(--mh-rule-thin) solid var(--mh-rule);
+  margin: var(--mh-s-6) 0;
+}
+
+code, .mh-mono {
+  font-family: var(--mh-font-mono);
+  font-size: 0.92em;
+}
+
+/* Italics neutralised — the brand currently uses upright Poppins / Instrument Serif. */
+em, i {
+  font-style: normal;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+::selection {
+  background: var(--mh-accent);
+  color: var(--mh-paper);
+}
