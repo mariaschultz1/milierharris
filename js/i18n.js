@@ -36,7 +36,14 @@ const INLINE_TAGS = new Set(['STRONG', 'EM', 'B', 'I', 'A', 'SPAN', 'SMALL', 'BR
 const originalText = new WeakMap();
 const originalAttr = new WeakMap();
 
-function lookup(dict, original) {
+function lookup(dict, original, overrideKey) {
+  // An explicit data-i18n key wins over the element's text, so the same
+  // English word can resolve differently per context (e.g. nav "Services"
+  // vs the lowercase home "Explore" list).
+  if (overrideKey) {
+    const k = overrideKey.replace(/\s+/g, ' ').trim();
+    return dict?.[k] != null ? dict[k] : original;
+  }
   const key = original.replace(/\s+/g, ' ').trim();
   return key && dict?.[key] ? original.replace(key, dict[key]) : original;
 }
@@ -48,7 +55,8 @@ function snapshotText(el) {
 
 function applySimple(el, dict) {
   const original = snapshotText(el);
-  el.textContent = dict ? lookup(dict, original) : original;
+  const override = el.getAttribute ? el.getAttribute('data-i18n') : null;
+  el.textContent = dict ? lookup(dict, original, override) : original;
 }
 
 function applyMixed(el, dict) {

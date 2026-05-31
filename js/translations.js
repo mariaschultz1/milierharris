@@ -35,14 +35,14 @@ export const translations = {
       "En jouant le rôle de point central de coordination, nos professionnels supervisent l'administration technique et fournissent des conseils objectifs.",
     "Approach": "Approche",
     "We handle the fundamental mechanics of wealth preservation":
-      "nous gérons les mécanismes fondamentaux de la préservation du patrimoine",
+      "Nous gérons les mécanismes fondamentaux de la préservation du patrimoine",
     "Milier Harris converts strategic theory into functional reality by coordinating legal, financial, tax, and operational mandates. This allows our clients to redirect their time and attention while we ensure exact execution.":
       "Milier Harris transforme la théorie stratégique en réalité fonctionnelle en coordonnant les mandats juridiques, financiers, fiscaux et opérationnels. Cela permet à nos clients de consacrer leur temps et leur attention à d'autres tâches tandis que nous assurons une exécution rigoureuse.",
     "Read more about us →": "En savoir plus →",
     "Explore Milier Harris": "Découvrez Milier Harris",
-    "Services": "services",
+    "explore.services": "Services",
     "Success stories": "témoignages",
-    "Careers": "carrières",
+    "explore.careers": "Carrières",
     "Milier Harris brings serious private-office capability to clients who prefer substance over display.":
       "Milier Harris offre des services de gestion privée de haut niveau aux clients qui privilégient le fond à la forme.",
 
@@ -87,7 +87,6 @@ export const translations = {
     "— next": "— suivant",
     "— work with us": "— travailler avec nous",
     "— enquire": "— demander",
-    "Contact": "contact",
 
     // — SERVICES
     "Our work is wide-ranging because private affairs rarely fit inside one category.":
@@ -96,7 +95,7 @@ export const translations = {
     "Multidisciplinary oversight for private capital.": "Une supervision multidisciplinaire des capitaux privés.",
     "What we do": "Ce que nous faisons",
     "Sound structures, important opportunities, fewer points of avoidable friction":
-      "des structures solides, des opportunités importantes, moins de frictions évitables",
+      "Des structures solides, des opportunités importantes, moins de frictions évitables",
     "Milier Harris helps clients establish sound structures, assess important opportunities, reduce avoidable friction, and maintain continuity across personal and financial matters.":
       "Milier Harris aide ses clients à mettre en place des structures solides, à évaluer les opportunités importantes, à réduire les frictions évitables et à assurer la continuité dans leurs affaires personnelles et financières.",
     "We are comfortable in situations that are detailed, time-sensitive, or cross-jurisdictional. We are equally attentive to the administrative groundwork that keeps larger plans credible.":
@@ -171,7 +170,7 @@ export const translations = {
     "To complete · without operational disruption": "Pour terminer · sans perturbation opérationnelle",
 
     "— Scenario B": "— Scénario B",
-    "Generational transition of a primary asset": "transmission générationnelle d'un actif principal",
+    "Generational transition of a primary asset": "Transmission générationnelle d'un actif principal",
     "An ageing founder required a legal and governance framework capable of transferring ownership of a privately held enterprise to the next generation without relinquishing immediate operational control.":
       "Un fondateur vieillissant avait besoin d'un cadre juridique et de gouvernance permettant de transférer la propriété d'une entreprise privée à la génération suivante sans renoncer au contrôle opérationnel immédiat.",
     "We designed a bifurcated trust structure separating voting control from economic ownership. This enabled the founder to retain executive authority whilst progressively transferring beneficial interests to the next generation. Alongside the legal restructuring, Milier Harris implemented a phased governance education programme to prepare successors for future leadership and board responsibilities.":
@@ -265,7 +264,7 @@ export const translations = {
     "Competitive compensation aligned with experience and capability": "Une rémunération compétitive adaptée à l'expérience et aux compétences",
     "Apply for this role": "Postuler à ce poste",
     "Application": "Candidature",
-    "Submit your CV and a brief cover letter": "Envoyez votre CV et une brève lettre de motivation",
+    "Submit your CV and a brief cover letter": "Veuillez soumettre votre CV et une brève lettre de motivation.",
     "To apply, please submit your CV and a brief cover letter to Milier Harris at": "Pour postuler, veuillez envoyer votre CV et une brève lettre de motivation à Milier Harris à l'adresse",
     "or fill in the application form below.": "ou remplir le formulaire de candidature ci-dessous.",
     "Name *": "Nom *",
@@ -287,7 +286,7 @@ export const translations = {
     "Initial enquiries handled with discretion.": "Demandes initiales traitées en toute discrétion.",
     "Enquiries": "Demandes",
     "Thoughtful coordination across private wealth, corporate affairs and international structures":
-      "coordination minutieuse entre la gestion de patrimoine privé, les affaires d'entreprise et les structures internationales",
+      "Coordination minutieuse entre la gestion de patrimoine privé, les affaires d'entreprise et les structures internationales",
     "Milier Harris works with a limited number of principals and families requiring thoughtful coordination across private wealth, corporate affairs, and international structures.":
       "Milier Harris travaille avec un nombre restreint de clients et de familles nécessitant une coordination minutieuse entre la gestion de patrimoine privé, les affaires d'entreprise et les structures internationales.",
     "Initial enquiries are handled with discretion and reviewed directly by our team. If your requirements align with Milier Harris's scope of work, we will arrange a confidential discussion to better understand your objectives and determine how we may assist.":
